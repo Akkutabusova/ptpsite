@@ -25,7 +25,7 @@ SECRET_KEY = '9yclg(f0xfs4wetg2_(o0+b&jim)$ueajscn#)r2*c^72^lamn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'shrouded-dusk-32376.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com', 'shrouded-dusk-32376.herokuapp.com']
 
 
 
