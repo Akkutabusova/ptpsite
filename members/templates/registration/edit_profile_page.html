@@ -2,25 +2,25 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>Add Post</h1>
+{% if user.id == profile.user.id %}
+
+<h1>Edit Profile Page</h1>
 
 <div class="form_group">  
 <form method="POST" enctype="multipart/form-data">
   {% csrf_token %}
-  {{form.media}}
   {{form.as_p}}
   <br/>
-  <button class="btn btn-primary">Post</button>
-  <script>
-	var name = "{{user.id}}";
-	document.getElementById("usr").value = name;
-
-</script>
+  <button class="btn btn-primary">Update</button>
+  
 </div>
 
+{% else %}
+You'r not allowed here!1
+{% endif %}
 
 {% else %}
-You'r not allowed here!
+You'r not allowed here!2
 {% endif %}
  
 {% endblock %}
